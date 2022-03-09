@@ -22,4 +22,19 @@ public class CustomListTest {
         list.addCity(new City("Halifax", "NS"));
         assertEquals(list.getCount(), listSize + 1);
     }
+
+    @Test
+    public void hasCity(){
+        list.addCity(new City("TestCity","MN"));
+        assertEquals(list.getItem(list.getCount()-1 ),"TestCity");
+    }
+
+    @Test
+    public void deleteCity(){
+        City testCity = new City("Halifax", "NS")
+        list.addCity(testCity);
+        int listSize = list.getCount();
+        list.delCity(testCity);
+        assertEquals(list.getCount(), listSize - 1);
+    }
 }
