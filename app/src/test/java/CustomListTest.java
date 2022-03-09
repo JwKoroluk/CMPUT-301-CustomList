@@ -31,10 +31,16 @@ public class CustomListTest {
 
     @Test
     public void deleteCity(){
-        City testCity = new City("Halifax", "NS")
+        City testCity = new City("Halifax", "NS");
         list.addCity(testCity);
         int listSize = list.getCount();
         list.delCity(testCity);
         assertEquals(list.getCount(), listSize - 1);
+    }
+    @Test
+    public void countCities(){
+        City testCity2 = new City("TestCity2","MN");
+        int listSize = list.getCount();
+
     }
 }
